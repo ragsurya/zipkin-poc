@@ -9,6 +9,7 @@
   "author": "Raghav Surya",
   "license": "MIT",
   "dependencies": {
+    "bunyan": "^1.8.12",
     "express": "^4.16.2",
     "node-fetch": "^2.1.1",
     "zipkin": "^0.12.0",
