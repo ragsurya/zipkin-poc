@@ -9,7 +9,7 @@ const zipkinFetch = wrapFetch(fetch, {
   tracer: ZipkinTracer,
   serviceName: 'first_service'
 });
-const log = require('./services/logger/logger');
+const log = require('../services/logger/logger');
 
 
 app.use(zipkinMiddleware({

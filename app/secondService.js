@@ -2,7 +2,7 @@ const express = require('express');
 const app = express();
 const zipkinMiddleware = require('zipkin-instrumentation-express').expressMiddleware;
 const ZipkinTracer = require('./zipkinTracer');
-const log = require('./services/logger/logger');
+const log = require('../services/logger/logger');
 
 app.use(zipkinMiddleware({
     tracer: ZipkinTracer,

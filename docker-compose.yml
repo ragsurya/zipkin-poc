@@ -1,0 +1,17 @@
+version: "3"
+services:
+  zipkin-microservice:
+    build: .
+    volumes:
+      - . :/usr/src/app
+    ports:
+      - 3000:8000
+
+  zipkin-web:
+    image: openzipkin/zipkin
+    volumes:
+      - ./zipkin-web:/var/www/html
+    ports:
+        - 9411:9411
+    depends_on: 
+        - zipkin-microservice
